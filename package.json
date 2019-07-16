@@ -1,0 +1,37 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && NODE_ENV=production node ./dist/app.js",
+    "dev": "NODE_ENV=development nodemon --watch src/ --exec ts-node src/app.ts -e ts",
+    "test": "jest --coverage"
+  },
+  "author": "Denis Policastro",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/helmet": "0.0.43",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.3",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "inversify": "^5.0.1",
+    "inversify-express-utils": "^6.3.2",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.4",
+    "reflect-metadata": "^0.1.13"
+  }
+}
