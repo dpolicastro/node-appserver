@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  node-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - APP_HOST=0.0.0.0
+    volumes:
+      - /var/log/node-appserver:/var/log/node-appserver
+    ports:
+      - "3000:3000"
+    command: npm start
