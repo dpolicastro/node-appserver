@@ -6,4 +6,4 @@ elif [ "$DEPLOYMENT_GROUP_NAME" == "Production" ]; then
   # Copy to /var/www/html
 else
   # Fail the deployment
-end
+fi
